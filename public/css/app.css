@@ -10,10 +10,11 @@ ul li {padding: .25em .75em .25em .75em;}
 
 nav ul li {display: inline-block;}
 
-nav {width: 70%;
+nav {width: 38%;
+	 font-size: .75em;
 	 margin: auto;
 	 background-color: slategrey;
-	 border-radius: 2%;}
+	 border-radius: 5px;}
    
 a,
 a:visited {color: black;
@@ -22,3 +23,7 @@ a:visited {color: black;
 a:visited {font-style: italic;}
 
 a:hover {text-decoration: underline;}
+
+form label {font-size: .8em;}
+
+footer p {font-size: .8em;}

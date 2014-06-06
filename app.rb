@@ -15,3 +15,16 @@ get '/contacts/:id' do
   @contact = Contact.find(params[:id])
   erb :show
 end
+
+get '/submit' do
+  erb :submit
+end
+
+post '/submit' do
+  Contact.create(
+    :first_name => params[:first_name],
+    :last_name => params[:last_name],
+    :phone_number => params[:phone_number]
+    )
+  redirect '/'
+end
