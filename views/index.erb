@@ -1,7 +1,25 @@
 <h1>Contacts</h1>
 
+<nav>
+  <ul>
+    <li> 
+      <a href="/?page=<%= @page - 1 %>"> Previous </a> 
+    </li>
+    
+      <li> 
+      <a href="/"> Home </a> 
+    </li>
+
+    <li> 
+      <a href="/?page=<%= @page + 1 %>"> Next </a> 
+    </li>
+  </ul>
+</nav>
+
 <ul>
   <% @contacts.each do |contact| %>
-    <li><%= contact.name %> - <%= contact.phone_number %></li>
+    <li> <a href="/contacts/<%= contact.id %>"> 
+    <%= contact.name %> - <%= contact.phone_number %>
+    </a> </li>
   <% end %>
 </ul>
