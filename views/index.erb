@@ -2,17 +2,22 @@
 
 <nav>
   <ul>
-    <li> 
-      <a href="/?page=<%= @page - 1 %>"> Previous </a> 
-    </li>
-    
+
+    <% if @page > 0 %>  
+      <li> 
+        <a href="/?page=<%= @page - 1 %>"> Previous </a> 
+      </li>
+    <% end %>
+
       <li> 
       <a href="/"> Home </a> 
     </li>
 
-    <li> 
-      <a href="/?page=<%= @page + 1 %>"> Next </a> 
-    </li>
+    <% if @contacts.count == 3 %>
+      <li> 
+        <a href="/?page=<%= @page + 1 %>"> Next </a> 
+      </li>
+    <% end %>
   </ul>
 </nav>
 
@@ -23,3 +28,8 @@
     </a> </li>
   <% end %>
 </ul>
+
+<form action="/" method="get">
+  <input type="text" name="search">
+  <input type="submit" value="Search by Name">
+</form>
